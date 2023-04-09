@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@300&display=swap">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="favicon_b.ico" type="image/x-icon" id="favicon">
+    <title>PC構成</title>
+</head>
+<body>
+    <div style="display:inline-block;margin:50px 0;">
+        <select id="selectBud" onchange="checkAll()">
+            <option value="">予算.Budget</option>
+            <option value="8~9万円">8~9万円</option>
+            <option value="10~13万円">10~13万円</option>
+            <option value="14~16万円">14~16万円</option>
+            <option value="無制限">無制限</option>
+        </select>
+
+        <select id="selectSiz" onchange="checkAll()">
+            <option value="">サイズ.Size</option>
+            <option value="ATX">ATX (大)</option>
+            <option value="Micro-ATX">Micro-ATX (中)</option>
+            <option value="Mini-ITX">Mini-ITX (小)</option>
+        </select>
+
+        <select id="selectCpu" onchange="checkAll()">
+            <option value="">CPUメーカー</option>
+            <option value="Intel">Intel</option>
+            <option value="AMD">AMD</option>
+        </select>
+
+        <select id="selectGpu" onchange="checkAll()">
+            <option value="">GPUブランド</option>
+            <option value="NVIDIA GeForce">NVIDIA GeForce</option>
+            <option value="AMD Radeon">AMD Radeon</option>
+        </select>
+
+        <select id="selectRam" onchange="checkAll()">
+            <option value="">RAM容量</option>
+            <option value="8GB">8GB</option>
+            <option value="16GB">16GB</option>
+            <option value="32GB">32GB</option>
+        </select>
+
+        <select id="selectRom" onchange="checkAll()" style="margin:0;">
+            <option value="">ROM容量</option>
+            <option value="256GB">256GB</option>
+            <option value="512GB">512GB</option>
+            <option value="1TB">1TB(1024GB)</option>
+        </select>
+    </div>
+
+    <div>
+        <div id="output"></div>
+        <h2 id="total_price"></h2>
+    </div>
+
+    <h1 class="copyright_text">© 2023 草島 蓮</h1>
+
+    <script src="parts.js"></script>
+    <script src="calc.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
